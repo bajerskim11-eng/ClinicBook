@@ -1,0 +1,16 @@
+services:
+  app:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SUPABASE_URL: ${NEXT_PUBLIC_SUPABASE_URL}
+        NEXT_PUBLIC_SUPABASE_ANON_KEY: ${NEXT_PUBLIC_SUPABASE_ANON_KEY}
+        NEXT_PUBLIC_APP_URL: ${NEXT_PUBLIC_APP_URL}
+    # Docker Compose reads `.env` in this directory for the ${...} substitutions
+    # above, and `env_file` below for runtime server-only secrets. This is a
+    # plain `.env` file, not `.env.local` (that's the `npm run dev` convention).
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
