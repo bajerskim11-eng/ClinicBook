@@ -48,7 +48,7 @@
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
-:root {
+:root { --background: #0b0d0c; --foreground: #f5f7f2; --card: #121513; --card-foreground: #f5f7f2; --primary: #caff45; --primary-foreground: #080a08; --muted: #171b18; --muted-foreground: #9ba39d; --border: rgba(255,255,255,.10);\n  /* Chillera palette */\n
   --background: oklch(0.985 0.004 85);
   --foreground: oklch(0.145 0.012 85);
   --card: oklch(0.995 0.003 85);
